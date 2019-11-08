@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+            
+        <tr>Amount</tr>
+        <tr>From Currency</tr>
+        <tr>To Currency</tr>
+        <tr></tr>
+
+
+    </table>
+    <form>
+        <fieldset>
+            <legend>Amount</legend>
+
+            <input type="text" id="tien" />
+        </fieldset><br>
+        <fieldset>
+            <legend> From Currency</legend>
+
+            <select name="FromCurrency" id="From">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+            </select>
+        </fieldset><br>
+        <fieldset>
+            <legend>To Currency</legend>
+
+            <select name="ToCurrency" id="To">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+            </select>
+            <br><br>
+            <button type="button" onclick=change();>change</button>
+            <script>
+                function change() {
+                    let x = document.getElementById('tien').value;
+                    if (From.value === "USD" && To.value === "VND") {
+                        alert(x * 23000 + 'VND');
+                    }
+                    if (From.value === "VND" && To.value === "USD") {
+                        alert(x / 23000 + "USD")
+                    }
+                }
+
+            </script>
+            <input type="reset" value="Reset" />
+
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
