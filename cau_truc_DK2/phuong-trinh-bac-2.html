@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let a = parseFloat(prompt("nhap a"));
+        let b = parseFloat(prompt("nhap b"));
+        let c = parseFloat(prompt("nhap c"));
+        let t = (b * b) - 4 * a * c;
+        if (a == 0) {
+            alert("vì a = o nên phương trình trở thành phương trình bậc nhất x= " + (-c) / b);
+        } else {
+            if (t < 0) {
+                alert("Phương trình vô nghiệm");
+            } else {
+                if (t = 0) {
+                    alert("phương trình có nghiệm kép x= " + (-b) / 2 * a);
+                } else {
+                    alert("phương trinh có 2 nghiệm phân biệt x1 = " + ((-b) + Math.sqrt(t) / 2 * a) + "x2 =" + ((-b) - Math.sqrt(t) / 2 * a));
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = parseFloat(prompt("nhập a"));
+        let b = parseFloat(prompt("nhập b"));
+        let c = parseFloat(prompt("nhập c"));
+        if (a > 0 && b > 0 && c > 0) {
+            if (a + b > c) {
+                if (b + c > a) {
+                    if (a + c > b) {
+                        alert("a,b,c là các cạnh của tam giác");
+                    } else {
+                        alert("a,b,c không phải là cạnh của tam giác");
+                    }
+
+                } else {
+                    alert("a,b,c không phải là cạnh của tam giác");
+                }
+            } else {
+                alert("a,b,c không phải là cạnh của tam giác");
+            }
+        } else {
+            alert("a,b,c không phải là cạnh của tam giác");
+        }
+
+
+
+    </script>
+</body>
+
+</html>

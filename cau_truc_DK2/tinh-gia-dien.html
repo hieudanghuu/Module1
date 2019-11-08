@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Nhập số điện đã dùng</h3>
+    <input id="gia" type="number">
+    <button type="button" onclick="tinh()">Tính</button>
+    <script>
+        function tinh() {
+            let x = document.getElementById("gia").value;
+            let tien ;
+            if (x <= 50) {
+                tien = x * 1678;
+            } else {
+                if ( x <= 100) {
+                    tien = x * 1734;
+                } else {
+                    if ( x <= 200) {
+                        tien = x * 2014;
+                    } else {
+                        if ( x <= 300) {
+                            tien = x * 2536;
+                        } else {
+                            if (x <=400) {
+                               tien = x * 2834;
+                            } else {
+                                tien = x * 2927;
+                            }
+                        }
+                    }
+                }
+            } 
+            alert(tien + " VNĐ");
+        }
+        
+    </script>
+</body>
+
+</html>
