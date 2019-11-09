@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="nobita" src="images/vietinbank.png" style="position:absolute;left:300px; top:0px;" height="400"
+        width="600" /><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <fieldset>
+        <legend>
+            <font size="+4" color= "red" > lãi suất ngân hàng theo tháng </font>
+        </legend>
+        <input id="money" type="text"> nhập số tiền vay<br><br>
+        <select name="month" id="month">
+            <option value="1">1 tháng</option>
+            <option value="6">6 tháng</option>
+            <option value="12">12 tháng</option>
+        </select><br><br>
+        <button type="submit" onclick="submit()">Tính</button>
+    </fieldset>
+    <script>
+        function submit() {
+            let money = parseFloat(document.getElementById("money").value);
+            let month = parseFloat(document.getElementById("month").value);
+            if (month.value == "1" && money <= 5000000) {
+                money += money * 5 / 100;
+            } else if (month.value == "6" && money <= 50000000) {
+                money += money * 6 / 100;
+            } else if (month.value == "12" && money > 50000000) {
+                money += money * 7 / 100;
+            } else {
+                money += money * 8 / 100;
+            }
+            alert("tính cả lãi xuất là " + money + "VNĐ")
+
+        }
+    </script>
+</body>
+
+</html>

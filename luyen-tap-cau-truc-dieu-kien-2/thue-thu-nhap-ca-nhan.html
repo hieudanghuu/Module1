@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Tính thuế thu nhập cá nhân</h3>
+    <input id= "TNCN" type="text" ><br><br>
+    <button type="button" onclick="change()">Tính</button>
+    <script>
+    function change() {
+    let num = parseFloat(document.getElementById("TNCN").value);
+    let money;
+    if (num <= 5000000) {
+        money = num *5/100;
+    }else if (num <=10000000) {
+        money = num * 10/100;        
+    }else if (num <=18000000) {
+        money = num *15/100;
+    }else if (num <=32000000) {
+        money = num *20/100;
+    }else if( num <= 52000000) {
+        money = num *25/100;
+    }else if ( num <=80000000) {
+        money = num * 30/100;
+    }else {
+        money = num * 35/100;
+    }alert (" thuế thu nhập là :" + money +"VNĐ")
+    }
+    </script>
+</body>
+</html>
