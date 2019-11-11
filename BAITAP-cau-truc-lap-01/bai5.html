@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+		let n1 = 0,
+			n2 = 1,
+			n3,
+			amount=20;
+			total = "";
+		total =  n1 + n2;
+		for (let i =2 ; i < amount; i++) {
+			n3 = n1 + n2;
+			total += n3;
+			n1 = n2;
+			n2 = n3;
+		}
+		document.write(total);
+	</script>
+    <!-- <script>
+        var a = 0;
+        var b = 1;
+        var c;
+        let total="";
+        total=a+b;
+        
+        for (i = 2; i < 20; i++) {
+            c = a + b;
+            total+=c+1;
+            a = b;
+            b = c;                       
+        }
+        document.write(total); -->
+    </script>
+</body>
+
+</html>

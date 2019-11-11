@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên. -->
+    <script>
+        let total = 0,
+            amount = 30 * 7;
+        n = 0;
+        for (let i = 0; n <= amount; i++) {
+            if ((i % 7) == 0) {
+                total += i;
+                n++;
+            }
+        }
+        document.write(total);
+    </script>
+</body>
+
+</html>

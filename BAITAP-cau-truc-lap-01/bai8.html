@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button type="submit" id="play" onclick="click()">bắt đầu</button>
+    <script>
+
+        function click() {
+            let x = prompt("nhập số muốn chọn");
+            var y = Math.floor((Math.random() * 10) + 1);
+            document.getElementById("play").innerHTML = y;
+        }
+        for (let i = 1; i <= 3; i++) {
+            if (x = y) {
+                alert(" chúc mừng bạn đã đoán đúng");
+            } else {
+                x = prompt("nhập số muốn chọn");
+                alert("sai rồi mời đoán lại");
+            }
+        }
+    </script>
+</body>
+
+</html>

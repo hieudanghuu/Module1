@@ -10,13 +10,12 @@
 
 <body>
     <script>
-        let num = parseFloat(prompt("Enter your number: "));
-        let total = 0;
-        let T;
-        for (i = 1; i <= num; i += 1) {
-            total = total + i;          
+        let x = +prompt("nhập số giai thừa cần tính");
+        let j=1;
+        for (let i = x; i >= 1; i--) {
+            j *= i;
         }
-        alert(total);
+        document.write(j);
     </script>
 </body>
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Hiển thị ra 20 số trong dãy fibonacci đầu tiên -->
+    <script>
+        var a = 0;
+        var b = 1;
+        var c;
+        document.write('0' + '<br>' + '1' + '<br>');
+        for (i = 2; i < 20; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+           
+            document.write(c+ '<br>');
+        }
+		// let n1 = 0,
+		// 	n2 = 1,
+		// 	n3,
+		// 	SON = " ";
+		// amount = 20;
+		// SON =  n1 + " " + n2;
+		// for (let i =2 ; i < amount; i++) {
+		// 	n3 = n1 + n2;
+		// 	SON += " " +n3;
+		// 	n1 = n2;
+		// 	n2 = n3;
+		// }
+		// document.write(SON + "<br>");
+    </script>
+</body>
+
+</html>

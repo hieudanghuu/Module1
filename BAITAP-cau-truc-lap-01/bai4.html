@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+    function fibonacci(num) {
+        if (num <= 1) return num;
+        return fibonacci(num - 1) + fibonacci(num - 2);
+    }
+    let i=1;
+    let count =0;
+    while(count<1){
+         if(fibonacci(i) %5 ==0 ){
+            document.write(fibonacci(i));
+            count++;
+         }   
+        i++;
+    }   
+    </script>
+
+</body>
+
+</html>
