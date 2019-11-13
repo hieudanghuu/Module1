@@ -11,17 +11,13 @@
 <body>
     <!-- Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên. -->
     <script>
-        let total = 0,
-            amount = 30 * 7;
-        n = 0;
-        for (let i = 0; n <= amount; i++) {
+        let num = 30 * 7,
+            n = 0;
+        for (let i = 0; i <= num; i ++) {
             if ((i % 7) == 0) {
-                total += i;
-                n++;
+                n+= i;
             }
-        }
-        document.write(total);
+        } document.write(n);
     </script>
 </body>
-
 </html>

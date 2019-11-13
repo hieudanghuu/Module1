@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <script>
+    <!-- <script>
         let temperature = parseFloat(prompt("nhập nhiệt độ hiện tại :"));
         while(temperature>100) {
             alert("yêu cầu giảm nhiệt độ xuống");
@@ -19,6 +19,19 @@
             alert("yêu cầu tăng nhiệt độ lên");
             temperature = parseFloat(prompt("nhập lại nhiệt độ"));
         }
+    
+    </script> -->
+    <script>
+        let temperature = parseFloat(prompt("nhập nhiệt độ hiện tại :"));
+        while(temperature>100) {
+            alert("yêu cầu giảm nhiệt độ xuống");
+            temperature =parseFloat(prompt("nhập lại nhiệt độ: "));
+        }
+        while(temperature<20) {
+            alert("yêu cầu tăng nhiệt độ lên");
+            temperature =parseFloat(prompt("nhập lại nhiệt độ: "))
+        }
+        ;
     
     </script>
 </body>

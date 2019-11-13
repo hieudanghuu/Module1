@@ -9,21 +9,36 @@
 </head>
 
 <body>
-
+    <!-- Ứng dụng hiển thị cửa sổ prompt cho phép người dùng nhập vào muốn đoán trong khoảng nào
+        Ứng dụng chọn ra số ngẫu nhiên trong khoảng mà ngườI dùng chọn  
+        Ứng dụng hiển thị cửa số prompt cho người dùng nhập giá trị mà người dùng đoán  
+        Ứng dụng lấy kết quả và so sánh với giá trị ngẫu nhiên.
+        Nếu bằng thì hiển thị thông báo chúc mừng và kết thúc lượt chơi  
+        Nếu lớn hơn hoặc bé thua thì hiển thị thông báo lớn hơn hay bé thua và cho phép người dùng lựa chọn lại.
+        Chú ý: Người dùng chỉ được lựa chọn tối đa ba lần -->
+    to <input type="text" id="a"> <br><br>
+    from <input type="text" id="b"><br><br>
     <button type="submit" id="play" onclick="click()">bắt đầu</button>
     <script>
-
         function click() {
+            let n = document.getElementById(a).value;
+            let m = document.getElementById(b).value;
             let x = prompt("nhập số muốn chọn");
-            var y = Math.floor((Math.random() * 10) + 1);
-            document.getElementById("play").innerHTML = y;
-        }
-        for (let i = 1; i <= 3; i++) {
-            if (x = y) {
-                alert(" chúc mừng bạn đã đoán đúng");
-            } else {
-                x = prompt("nhập số muốn chọn");
-                alert("sai rồi mời đoán lại");
+
+            for (let j = 0; j <= 3; j++) {
+                for (let i = n; i <= m;) {
+                    i = Math.floor(Math.random() * i) + 1;
+                    if (i == x) {
+                        alert("chúc mừng bạn đã đoán đúng");
+                    } else if (i > x) {
+                        alert("lớn hơn rồi");
+                        x = prompt("nhập lại đi");
+                    } else if (i < x) {
+                        alert("bé hơn rồi nha");
+                        x = prompt("nhập lại đi");
+                    }
+                    i++;
+                }
             }
         }
     </script>

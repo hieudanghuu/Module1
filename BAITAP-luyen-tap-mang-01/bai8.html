@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Viết chương trình khởi tạo/nhập vào một mảng số 
+            nguyên gồm 10 phần tử. Chương trình sắp xếp mảng 
+            theo thứ tự giảm dần và hiển thị ra mảng
+             đã được sắp xếp. -->
+    <script>
+        let arr = new Array();
+        for (let i = 0; i < 10; i++) {
+            arr.push(Math.floor(Math.random() * 21));
+        } document.write("các phần tử trong mảng :" + "<br>" + arr + "<br>");
+        arr.sort();
+        arr.reverse();
+        document.write("thứ tự mảng được sắp xếp theo tứ tự giảm dần :"+"<br>"+arr)
+    </script>
+</body>
+
+</html>

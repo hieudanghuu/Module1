@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Viết chương trình đếm số nguyên âm trong một chuỗi -->
+    <h3> các phần tử đã nhập vào </h3>
+    <script>
+        let arr = new Array();
+        for (let i = 0; i < 5; i++) {
+            // arr.push(parseInt(prompt("nhập vào các phần tử chứa số nguyên âm")));
+            arr[i]=parseInt(prompt("nhập vào các phần tử chứa số nguyên âm"));
+        }document.write("("+arr + ") ");
+        let count = 0;
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] < 0) {  
+                count++ ;               
+            }
+        }document.write("<br>"+count);
+    </script>
+</body>
+
+</html>

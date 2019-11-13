@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử,
+         nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V 
+         có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng 
+         (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, 
+        và gán 0 cho phần tử cuối cùng của mảng) -->
+    <script>
+        let arr = new Array();
+        for (let i = 0; i < 10; i++) {
+            arr.push(Math.floor(Math.random() * 21));
+        }
+        console.log(arr);
+        document.write("các phần tử trong mảng ban đầu là : " + "<br>" + arr + "<br>");
+        let v = parseInt(prompt("nhập phần tử V :"));
+        let str;
+        for (let j = 0; j < arr.length; j++) {           
+            if (v === arr[j]) {
+                arr.splice(j,1);
+                console.log(arr);
+                str = "đã xóa thành công tại vị trí " + j + " của mảng";
+                break;
+            } else {
+                console.log('sss')
+                str = "V không thuộc mảng"
+            }
+        } 
+        document.write(str)
+        // while (arr.indexOf(v) !== -1) {
+        //     arr.splice(arr.indexOf(v), 1);
+        // }
+        
+        console.log(arr);
+
+    </script>
+</body>
+
+</html>
