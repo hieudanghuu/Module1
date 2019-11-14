@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-        <!-- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên 
+    <!-- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên 
         gồm 10 phần tử, gọi là mảng a và b. Mảng c là một mảng
          được khai báo gồm 20 phần tử số nguyên. 
          Chương trình sẽ lưu các phần tử được nối từ hai mảng 
          b và a vào mảng c. Hiển thị mảng c. -->
-         <script>
-         let a = [],b = [],c = [];
-         for( let i = 0; i<10;i++) {
-             a.push(Math.floor(Math.random()*101));
-         }document.write("các phần tử mảng a :"+"<br>"+a+"<br>");
-         for( i = 0 ; i < 10;i++){
-             b.push(Math.floor(Math.random()*101));
-         }document.write("các phần tử mảng b :"+"<br>"+b+"<br>");
-         for(i=0;i<20;i++){
-             c.push(Math.floor(Math.random()*101));            
-         }document.write("các phần tử của mảng c: "+"<br>"+c+"<br>");
-         c=c.concat(a);
-         c=c.concat(b);
-         document.write("mảng c sau khi cộng thêm 2 mảng a và b"+"<br>"+c)
-         
-         
-         </script>
+    <script>
+        let a = [], b = [], c = [];
+        for (let i = 0; i < 10; i++) {
+            a.push(Math.floor(Math.random() * 101));
+        } document.write("các phần tử mảng a :" + "<br>" + a + "<br>");
+        for (i = 0; i < 10; i++) {
+            b.push(Math.floor(Math.random() * 101));
+        } document.write("các phần tử mảng b :" + "<br>" + b + "<br>");
+        for (i = 0; i < 20; i++) {
+            c.push(Math.floor(Math.random() * 101));
+        } document.write("các phần tử của mảng c: " + "<br>" + c + "<br>");
+        c = c.concat(a);
+        c = c.concat(b);
+        document.write("mảng c sau khi cộng thêm 2 mảng a và b" + "<br>" + c);
+    </script>
 </body>
+
 </html>

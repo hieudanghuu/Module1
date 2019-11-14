@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Viết một chương trình khai báo một
+         mảng ký tự và kích thước của mảng. 
+        Chương trình này đếm số ký tự số trong mảng.  -->
+    <!-- <script>
+        let arr = "";
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+        for (let i = 0; i < 10; i++) {
+            arr += text.charAt(Math.floor(Math.random() * text.length));
+            // return arr;
+
+        } document.write("chuỗi ký tự :" + "<br>" + arr + "<br>");
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            count += 1;
+        }document.write("số phần tử trong chuỗi :  "+count+" phần tử")
+    </script> -->
+    <script>
+            var length = parseInt(prompt("Nhập vào độ dài của mãng :"));
+            var arr = [];
+            for (i = 0; i < length; i++) {
+                arr[i] = prompt("Nhập giá trị của từng phần tử trong mãng");
+            } document.write(arr)
+            var count = 0;
+            let str = arr.toString(); 
+            for (var i = 0; i < str.length; i++) {
+                if (isNaN(str[i])) {
+                } else { 
+                    count++;
+                }
+            }
+            document.write("Số kí tự là số trong mãng là : " + count);
+        </script>
+</body>
+
+</html>
