@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Viết hàm truyền vào mảng số nguyên bất kỳ, 
+        sau đó đảo ngược mảng số nguyên đó. -->
+    <script>
+        function createArray(array) {
+            for (let i = 0; i < 10; i++) {
+                array.push(Math.floor(Math.random() * 50) + 1);
+            }
+            return array;
+        }
+        // document.write(array);
+        function reverse() {
+            array.reverse();
+            return array;
+        }
+        let array = new Array();
+        document.write(createArray(array) + "<br>");
+        document.write("hàm đảo ngược :" + "<br>" + reverse(array));
+    </script>
+</body>
+
+</html>

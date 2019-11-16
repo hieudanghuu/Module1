@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó. -->
+    <script>            
+        function change(num1, num2) {
+            num1 = num1 - num2;
+            num2 = num1 + num2;
+            num1 = num2 - num1;
+            return [num1, num2]
+        }
+        let num1 = parseFloat(prompt("nhập 1 "));
+        let num2 = parseFloat(prompt("nhập 2 "));
+        document.write(num1+" "+num2+"<br>");
+        document.write(change(num1,num2));
+    </script>
+</body>
+
+
+
+</html>

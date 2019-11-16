@@ -19,7 +19,8 @@
             arr.push(Math.floor(Math.random() * 21));
         } document.write("các phần tử trong mảng :" + "<br>" + arr + "<br>");
         arr.sort();
-        arr.reverse();
+        arr.sort(function (a, b) {
+            return a - b;});           
         document.write("thứ tự mảng được sắp xếp theo tứ tự giảm dần :"+"<br>"+arr)
     </script>
 </body>

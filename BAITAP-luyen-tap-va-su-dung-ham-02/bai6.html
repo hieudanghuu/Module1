@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- : Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào 
+ có phải là nguyên dương không.
+ Nếu là nguyên dương trả về true, ngược lại trả về false. -->
+    <script>
+        function check(n) {
+           if( Number.isInteger(n) === true){
+            return true
+           }else {
+               return false
+           }          
+        }
+        let n = parseFloat(prompt("input n :"));
+        document.write(check(n));
+    </script>
+
+</body>
+
+</html>

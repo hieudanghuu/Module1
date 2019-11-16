@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ,
+         kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. 
+        Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1 -->
+    <script>
+        function charactersArray(arr) {
+            let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            for (let i = 0; i < 50; i++) {
+                arr += possible.charAt(Math.floor(Math.random() * possible.length));
+            }
+            return arr;
+        }
+        function check(arr) {
+            let count = 0;
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i] === text) {
+                    count +=1;
+                }
+            } 
+            if (count) {
+                return count;
+            } 
+            else {
+                return -1;
+            }
+        }
+        function main() {
+            let arr = new Array();
+            let text = prompt('nhập vào 1 ký tự để so sánh: ');
+            document.write(text + "<br>");
+            document.write(charactersArray(arr) + "<br>");
+            document.write(check(arr));
+        }
+        main();
+    </script>
+</body>
+
+</html>

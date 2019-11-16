@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất. -->
+    <script>
+        function checkIntegers(a, b, c) {
+            let max = a;
+            if (b < max) {
+               max = b;
+            }
+            if(c < max){
+                max=c;
+            }
+            return max;
+        }
+        let d = parseFloat(prompt("nhập a :"));
+        let e = parseFloat(prompt("nhập b :"));
+        let f = parseFloat(prompt("nhập c :"));
+        document.write("a = " + d + "<br>");
+        document.write("b = " + e + "<br>");
+        document.write("c = " + f + "<br>");
+        document.write(checkIntegers(d,e,f) + " là số nhỏ nhất");
+    </script>
+</body>
+
+</html>
