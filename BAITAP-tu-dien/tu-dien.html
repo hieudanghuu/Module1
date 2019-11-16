@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>dictionary</title>
+    </head>
+
+    <body>
+        <h1><b></b>Dictionary</h1>
+        <b>Nhập vào từ cần tìm: </b><input type="text" id="words"><br>
+        <button type="button" onclick="mySearch()">Search</button><br>
+        <div id="result" aria-colcount="red"></div>
+        <script>
+            let dictVie = ["xin chào", "Cán ơn", "tạm biệt", "đúng", "sai","ngủ ngon",];
+                dictEng = ["hello", "thanks", "goodbye", "true", "false","goodnight"];
+
+            function mySearch() {
+                let words = document.getElementById("words").value;
+                console.log(words);
+                for (var i = 0, length1 = dictEng.length; i < length1; i++) {
+                    if (dictEng[i] == words) {
+                        document.getElementById("result").innerHTML = dictVie[i];
+                        break;
+                    }
+                    else {
+                        document.getElementById("result").innerHTML = "can't found";
+                    }
+                }
+            }
+        </script>
+    </body>
+
+    </html>
+
+</body>
+
+</html>
