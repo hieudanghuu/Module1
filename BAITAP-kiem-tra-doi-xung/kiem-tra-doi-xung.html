@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Xây dựng chương trình sử dụng đệ quy 
+        để kiểm tra một từ có phải là từ đối xứng không. -->
+    <script>
+        function check(text) {
+            if (text[0] === text[text.length - 1]) {
+                for (let i = 0; text[i] = text[(text.length-1)-i]; i++);
+                
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        let text = new String(prompt("nhập từ muốn kiểm tra : "));
+        document.write(check(text));
+    </script>
+</body>
+
+</html>
