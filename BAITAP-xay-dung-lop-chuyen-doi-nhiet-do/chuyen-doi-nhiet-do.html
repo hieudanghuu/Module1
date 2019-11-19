@@ -12,22 +12,27 @@
     <script>
         let temperatureCalculator = function (C) {
             this.C = C;
-            this.getC = function () {
-                return C;
-            }
-            this.getF = function() {
-                return  (C * 9/5) + 32;
-            }
-            this.getK= function () {
-                return C + 273.15;
+            if (C > -273) {
+                this.getC = function () {
+
+                    return C;
+                }
+                this.getF = function () {
+                    return (C * 9 / 5) + 32;
+                }
+                this.getK = function () {
+                    return C + 273.15;
+                }
+            } else {
+                return alert("nhiệt độ không phù hợp ")
             }
         }
         let calculator = new temperatureCalculator(25);
         let C = calculator.getC();
         let F = calculator.getF();
         let K = calculator.getK();
-        alert (F +"°F   và   "+ K +  " °K  ");
-        
+        alert(F + "°F   và   " + K + " °K  ");
+
     </script>
 </body>
 
