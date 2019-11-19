@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="200" height="100" style="border:10px solid #1c03fd;">
+    </canvas>
+    <script>
+        let Rectangle = function (length, width) {
+            this.length = length;
+            this.width = width;
+
+            this.getArea = function () {
+                return length * width;
+            }
+            this.getPerimeter = function () {
+                return (length + width) * 2;
+            }
+            this.getDisplay = function () {
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "#FF0000";
+                ctx.fillRect(0, 0, 200, 100);
+            }
+        }
+        let rectangle = new Rectangle(100, 200);
+        let area = rectangle.getArea();
+        let preimeter = rectangle.getPerimeter();
+        rectangle.getDisplay();
+        document.write("<br>" + " diện tích : " + area + "  chu vi: " + preimeter + "<br>");
+    
+    </script>
+</body>
+
+</html>
