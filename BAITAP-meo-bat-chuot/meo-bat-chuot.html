@@ -19,21 +19,22 @@
 
 <body>
     <script>
-        function Ray(name, amount, speed, ) {
+        class  Ray {
+       constructor (name, amount, speed,) {
             this.name = name;
             this.amount = amount;
             this.speed = speed;
-
-            this.getName = function () {
+        }
+            getName = function () {
                 return this.name;
             }
-            this.getAmount = function () {
+            getAmount = function () {
                 return this.amount;
             }
-            this.setAmount = function () {
+            setAmount = function () {
                 this.amount --;
             }
-            this.getSpeed = function () {
+            getSpeed = function () {
                 return this.speed;
             }
             // this.statusRay = function () {
@@ -41,28 +42,30 @@
             //     return "vẫn còn"
             // }
         }
-        function Tom(name, weight, speed) {
+        class Tom {
+       constructor (name, weight, speed) {
             this.name = name;
             this.weight = weight;
             this.speed = speed;
-            this.getName = function () {
+        }
+           getName = function () {
                 return this.name;
             }
-            this.getWeight = function () {
+            getWeight = function () {
                 return this.weight;
             }
-            this.getSpeed = function () {
+            getSpeed = function () {
                 return this.speed;
             }
-            this.setSpeed = function () {
+            setSpeed = function () {
                 this.speed++;
             }
-            this.catchMouse = function () {
+            catchMouse = function () {
                 if (cat1.getSpeed() > mouse1.getSpeed()) {
                     return this.eatMouse();
                 }
             }
-            this.eatMouse = function () {
+            eatMouse = function () {
                 if (mouse1.getAmount() > 0) {
                     this.weight++;
                     mouse1.setAmount ();
@@ -81,10 +84,10 @@
         mouse.innerHTML = `${mouse1.getName()} ${mouse1.getAmount()} ${mouse1.getSpeed()}`;
         Cat.innerHTML = `${cat1.getName()}  ${cat1.getWeight()}  ${cat1.getSpeed()}`;
         function catchthemouse() {
-            if(cat1.getSpeed() ===mouse1.getSpeed() )
+            if(cat1.getSpeed() <=mouse1.getSpeed() )
             return alert("tăng tốc lên");
             cat1.catchMouse(mouse1);
-            mouse.innerHTML = `${mouse1.getName()}weinght :  ${mouse1.getAmount()}  ${mouse1.getSpeed()}`;
+            mouse.innerHTML = `${mouse1.getName()} ${mouse1.getAmount()}  ${mouse1.getSpeed()}`;
             Cat.innerHTML = `${cat1.getName()}  ${cat1.getWeight()}  ${cat1.getSpeed()}`;
         }
         function onclick1() {

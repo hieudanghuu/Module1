@@ -9,31 +9,34 @@
 </head>
 
 <body>
-    <canvas id="myCanvas" width="200" height="100" style="border:10px solid #1c03fd;">
+    <canvas id="myCanvas" width="600" height="400" style="border:10px solid #1c03fd;">
     </canvas>
     <script>
-        let Rectangle = function (length, width) {
+        class Rectangle {
+         constructor (length, width) {
             this.length = length;
             this.width = width;
-
-            this.getArea = function () {
-                return length * width;
+        }
+            getArea = function () {
+                return this.length * this.width;
             }
-            this.getPerimeter = function () {
-                return (length + width) * 2;
+            getPerimeter = function () {
+                return (this.length + this.width) * 2;
             }
-            this.getDisplay = function () {
+            getDisplay = function () {
                 var c = document.getElementById("myCanvas");
-                var ctx = c.getContext("2d");
+                var ctx = c.getContext("2d");                
                 ctx.fillStyle = "#FF0000";
                 ctx.fillRect(0, 0, 200, 100);
+                ctx.font = ("20px Verdana");
+                ctx.fillText (" diện tích : " + area + "  chu vi: " + preimeter,200,100);
             }
         }
         let rectangle = new Rectangle(100, 200);
         let area = rectangle.getArea();
         let preimeter = rectangle.getPerimeter();
         rectangle.getDisplay();
-        document.write("<br>" + " diện tích : " + area + "  chu vi: " + preimeter + "<br>");
+         
     
     </script>
 </body>
