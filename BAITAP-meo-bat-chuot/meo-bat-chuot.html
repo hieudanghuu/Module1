@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <center>
+        <h1>Mouse</h1><br>
+        <p id="mouse"></p><br>
+        <h1>Cat</h1><br>
+        <p id="cat"></p><br>
+        <button onclick="onclick1()">speet UP</button>
+        <button onclick="catchthemouse()">catch the mouse</button>
+    </center>
+
+</head>
+
+<body>
+    <script>
+        function Ray(name, amount, speed, ) {
+            this.name = name;
+            this.amount = amount;
+            this.speed = speed;
+
+            this.getName = function () {
+                return this.name;
+            }
+            this.getAmount = function () {
+                return this.amount;
+            }
+            this.setAmount = function () {
+                this.amount --;
+            }
+            this.getSpeed = function () {
+                return this.speed;
+            }
+            // this.statusRay = function () {
+            //     if (this.amount == 0) return "đã hết"
+            //     return "vẫn còn"
+            // }
+        }
+        function Tom(name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.getName = function () {
+                return this.name;
+            }
+            this.getWeight = function () {
+                return this.weight;
+            }
+            this.getSpeed = function () {
+                return this.speed;
+            }
+            this.setSpeed = function () {
+                this.speed++;
+            }
+            this.catchMouse = function () {
+                if (cat1.getSpeed() > mouse1.getSpeed()) {
+                    return this.eatMouse();
+                }
+            }
+            this.eatMouse = function () {
+                if (mouse1.getAmount() > 0) {
+                    this.weight++;
+                    mouse1.setAmount ();
+                }else {
+                    return alert ("hết chuột rồi");
+                }
+            }
+        }
+        let mouse1 = new Ray("jerry", 10, 10);
+        let cat1 = new Tom("tom", 20, 9);
+
+        // console.log(mouse1.getSpeed())
+        let mouse = document.getElementById("mouse");
+        let Cat = document.getElementById("cat");
+
+        mouse.innerHTML = `${mouse1.getName()} ${mouse1.getAmount()} ${mouse1.getSpeed()}`;
+        Cat.innerHTML = `${cat1.getName()}  ${cat1.getWeight()}  ${cat1.getSpeed()}`;
+        function catchthemouse() {
+            if(cat1.getSpeed() ===mouse1.getSpeed() )
+            return alert("tăng tốc lên");
+            cat1.catchMouse(mouse1);
+            mouse.innerHTML = `${mouse1.getName()}weinght :  ${mouse1.getAmount()}  ${mouse1.getSpeed()}`;
+            Cat.innerHTML = `${cat1.getName()}  ${cat1.getWeight()}  ${cat1.getSpeed()}`;
+        }
+        function onclick1() {
+            Cat.innerHTML= cat1.setSpeed();
+            mouse.innerHTML = `${mouse1.getName()}    ${mouse1.getAmount()}    ${mouse1.getSpeed()}`;
+            Cat.innerHTML = `${cat1.getName()}    ${cat1.getWeight()}     ${cat1.getSpeed()}`;
+        }
+    </script>
+</body>
+
+</html>
