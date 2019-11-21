@@ -11,7 +11,7 @@
 <body>
     <script>
         let Battery = function () {
-            this.setEnergy = function (energy) {
+            this.setEnergy = function () {
                 this.energy = energy;
             };
             this.getEnergy = function () {
@@ -23,16 +23,11 @@
                 }
             }
         };
-        let FlashLamp = function () {
-
-            this.setBattery = function (battery) {
-                this.battery = battery;
-            };
-
+        let FlashLamp = function (battery) {
+            this.battery = battery;
             this.getBatteryInfo = function () {
                 return this.battery.getEnergy();
             };
-
             this.light = function () {
                 if (this.status) {
                     alert("Lighting");
@@ -49,11 +44,9 @@
                 this.status = false;
             }
         };
-        var battery = new Battery();
+        let battery = new Battery();
         battery.setEnergy(10);
-
-        var flashLamp = new FlashLamp();
-        flashLamp.setBattery(battery);
+        let flashLamp = new FlashLamp(battery);
 
         document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
         flashLamp.light();
@@ -68,4 +61,5 @@
         flashLamp.light();
     </script>
 </body>
+
 </html>

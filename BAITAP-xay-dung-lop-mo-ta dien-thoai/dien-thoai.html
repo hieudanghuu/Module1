@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Có một thông số về trạng thái pin tính bằng đơn vị số nguyên (tối đa 100 đv)
+Có một vùng nhớ dùng để lưu tin nhắn đang soạn thảo.
+Có một vùng nhớ dùng để lưu tin nhắn trong hộp thư đến.
+Có một vùng nhớ dùng để lưu tin nhắn đã gửi.
+Có chức năng kiểm tra trạng thái điện thoại bật hay tắt.
+Có chức năng bật và tắt điện thoại.
+Có chức năng xạc pin điện thoại.
+Có chức năng soạn tin nhắn.
+Có chức năng nhận tin nhắn từ một chiếc mobile khác.
+Có chức năng gửi tin nhắn tới một chiếc mobile khác.
+Có chức năng xem tin trong hộp thư đến.
+Có chức năng xem tin đã gửi.
+Sau mỗi lần sử dụng một chức năng, năng lượng pin sẽ giảm đi một đơn vị.
+Các chức năng không thể hoạt động nếu điện thoại chưa bật. -->
+    <script>
+        let Mobile = function (pinStatus, textingMes, inboxMes, sentMes, phoneStatus) {
+            this.pinStatus = pinStatus;
+            this.textingMes = textingMes;
+            this.inboxMes = inboxMes;
+            this.sentMes = sentMes;
+            this.phoneStatus = phoneStatus;
+
+            this.getpinStatus = function () {
+                return this.pinStatus;
+            };
+            this.gettextingMes = function () {
+                return this.textingMes;
+            };
+            this.getinboxMes = function () {
+                return this.sentMes;
+            };
+            this.getphoneStatus = function () {
+                return this.phoneStatus;
+            };
+            this.onAndoff = function () {
+                if (this.phoneStatus == "on") {
+                    this.phoneStatus == "off"
+                } else {
+                    this.phoneStatus == "on"
+                }
+            };
+            this.chargephone = function () {
+                if (this.pinStatus < 20) {
+                    return phoneStatus == " pin yếu"
+                    if (this.pinStatus = 0) {
+                        return phoneStatus == "off";
+                    }
+                }
+            };
+            this.textingmes = function () {
+                this.textingMes;
+            };
+            this.receiveMes = function () {
+                this.inboxMes;
+            };
+            this.sendMes = function () {
+                this.sentMes;
+            };
+            this.viewSentMes = function () {
+                this.sentMes;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

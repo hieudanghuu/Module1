@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1000px" height="500px" style="border:10px solid rgb(241, 3, 3);">
+        <script>
+            let Circle = function (x, y, radius) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+            }
+            function createCircle() {
+                let ctx = document.getElementById("myCanvas").getContext("2d");
+                let circle = new Circle(500, 400, 80);
+                ctx.beginPath();
+                ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+                ctx.fill();
+            }
+            createCircle();
+            function createCircle1() {
+                let ctx = document.getElementById("myCanvas").getContext("2d");
+                let radius = (Math.floor(Math.random() * 81));
+                let x = Math.random() * window.innerWidth;
+                let y = Math.random() * window.innerHeight;
+                // let x = (Math.floor(Math.random()*1000));
+                // let y = (Math.floor(Math.random()*500));
+                let color = randomColor();
+                let circle = new Circle(x, y, radius);
+
+                ctx.beginPath();
+                ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+                ctx.fillStyle = color ;
+                ctx.fill();
+            }
+            createCircle1();
+            function createCircle2() {
+                let ctx = document.getElementById("myCanvas").getContext("2d");
+                let radius = (Math.floor(Math.random() * 81));
+                // let x = Math.random() * window.innerWidth;
+                // let y = Math.random() * window.innerHeight;
+                let x = randomNum();
+                let y = randomNum1();
+                let circle = new Circle(x, y, radius);
+                let color = randomColor();
+                ctx.beginPath();
+                ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+                ctx.fillStyle = color;
+                ctx.fill();
+            }
+            createCircle2();
+            function randomNum() {
+                return Math.floor(Math.random() * 1000);
+            }
+            function randomNum1() {
+                return Math.floor(Math.random() * 500);
+            }
+            function randomNum2() {
+                return Math.floor(Math.random() * 255);
+            }
+            function randomColor() {
+                let red = randomNum2();
+                let blue = randomNum2();
+                let green = randomNum2();
+                return "rgb(" + red + "," + blue + "," + green + ")";
+            }
+            function createCircle30() {
+                for (let i = 1 ; i <30 ; i++){
+                    createCircle1();
+                    createCircle2();
+                }
+            }
+            createCircle30();
+        </script>
+</body>
+
+</html>
