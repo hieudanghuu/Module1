@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        validateEmail = (str) => {
+            regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+            if (regexp.test(str)) {
+                return true;
+            }
+            return false;
+        }
+        
+        let mail = 'a@gmail.com';
+        let mail1 = 'ab@yahoo.com';
+        let mail2 = 'abc@hotmail.com';
+        let mail3 = '@gmail.com';
+        let mail4 = 'ab@gmail.';
+        let mail5 = '@#abc@gmail.com';
+    document.write(validateEmail(mail)+ "<br>");
+    document.write(validateEmail(mail1)+ "<br>");
+    document.write(validateEmail(mail2)+ "<br>");
+    document.write(validateEmail(mail3)+ "<br>");
+    document.write(validateEmail(mail4)+ "<br>");
+    document.write(validateEmail(mail5));
+        document
+    </script>
+</body>
+
+</html>
