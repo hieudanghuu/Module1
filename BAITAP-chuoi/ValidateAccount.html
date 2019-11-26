@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        validateAccount= (str)=> {
+            regexp = /^[_a-z0-9]{6,}$/;
+            if(regexp.test(str)) {
+                return true;
+            }
+            return false;
+        }
+        
+        let account = '123abc_';
+        let account1 ='_abc123';
+        let account2 ='______';
+        let account3 ='123456';
+        let account4 ='abcdefg';
+        let account5 ='.@';
+        let account6 ='12345';
+        let account7 ='1234_';
+        let account8 ='abcde ';
+        document.write (validateAccount(account) + "<br>");
+        document.write (validateAccount(account1) + "<br>");
+        document.write (validateAccount(account2) + "<br>");
+        document.write (validateAccount(account3) + "<br>");
+        document.write (validateAccount(account4) + "<br>");
+        document.write (validateAccount(account5) + "<br>");
+        document.write (validateAccount(account6) + "<br>");
+        document.write (validateAccount(account7) + "<br>");
+        document.write (validateAccount(account8) + "<br>");
+
+        </script>
+</body>
+</html>
