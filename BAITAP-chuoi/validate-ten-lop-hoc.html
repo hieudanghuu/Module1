@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         validateClass = (str) =>{
+             regexp = /^[C|A|P]+[0-9]{4}[G|H|I|K|L|M]$/;
+             if (regexp.test(str)) {
+                 return true;
+             }
+             return false;
+         }
+         let Class  = 'C0318G';
+         let Class1 = 'M0318G';
+         let Class2 = 'P0323A';
+         document.write(validateClass(Class)+ "<br>");
+         document.write(validateClass(Class1)+ "<br>");
+         document.write(validateClass(Class2)+ "<br>");
+        </script>
+</body>
+</html>
