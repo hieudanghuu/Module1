@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        validateData = (str) => {
+            regexp = /^[0-9]{1,2}[\/][0-9]{1,2}[\/][0-9]{4}$/;
+        
+        if(regexp.test(str)){
+            return true;
+        }
+        return false;
+    }
+        let data  = 'dd/mm/yyyy';
+        let data1 = '411/2/1990';
+        let data2 = '1/412/1990';
+        let data3 = '11/12/42990';
+        let data4 = '11/12/1990';
+        let data5 = '01/12/2000';
+        document.write(validateData(data )+"<br>");
+        document.write(validateData(data1)+"<br>");
+        document.write(validateData(data2)+"<br>");
+        document.write(validateData(data3)+"<br>");
+        document.write(validateData(data4)+"<br>");
+        document.write(validateData(data5)+"<br>");
+
+
+        </script>
+</body>
+</html>
