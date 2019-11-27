@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        validateTelephoneNumber = (str) =>{
+            regexp = /^([\(][(0-9]{2}[\)])[\-]([\(][0][0-9]{9}[\)])$/;
+            if(regexp.test(str)){
+                return true
+            }
+            return false;
+        }
+        let num = '(84)-(0978489648)';
+        let num1 = '(a8)-(22222222)';
+        document.write(validateTelephoneNumber(num)+"<br>");
+        document.write(validateTelephoneNumber(num1)+"<br>");
+         </script>
+</body>
+</html>
