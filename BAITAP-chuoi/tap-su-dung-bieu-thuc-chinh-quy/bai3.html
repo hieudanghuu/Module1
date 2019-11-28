@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    validateCount = (str) => {
+            let regexp = /\b[^aeiouAEIOU\s][a-zA-Z]*[aeiouAEIOU]\b/g;
+            return str.match(regexp).length;
+        }
+        let count = "elephant egg language processing newspaper grep telephone "
+
+        document.write(validateCount(count));
+    </script>
+</body>
+</html>
