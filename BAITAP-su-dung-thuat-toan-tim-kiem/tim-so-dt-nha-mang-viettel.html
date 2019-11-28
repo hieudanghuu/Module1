@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        
+        function validateViettel(str) {
+            regexp = /((032|033|034|035|036|037|038|039)+([0-9]{7})\b)/g;
+            if(regexp.test(str)){
+                return "số của nhà mạng viettel";
+            }
+            return "không phải số của nhà mạng viettel";
+        }
+        let testNum = prompt("nhập số cần kiểm tra");
+        document.write(validateViettel(testNum));
+        
+        </script>
+</body>
+</html>
