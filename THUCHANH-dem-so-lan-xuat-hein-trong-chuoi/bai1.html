@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Viết chương trình đếm số lần xuất hiện của một phần tử trong mảng cho trước.
+        //  Minh họa như sau: Cho một mảng ngẫu nhiên gồm 100 phần tử. Nhập vào giá trị của phần tử cần đếm.
+        //  Khi chương trình thực thi kết quả trả về như hình dưới
+        function Count(arr,num) {
+            let count = 0;
+            for(let i = 0 ; i <arr.length; i ++) {
+                if(arr [i] == num ) {
+                    count ++;
+                }
+            }return count ;           
+        }
+        let arr1 = [];
+        for(let i = 0 ; i < 100; i ++) {
+        arr1.push (Math.floor(Math.random()*101));
+    }
+    let num1 = parseFloat(prompt("nhập giá trị muốn tìm"));
+    document.write(arr1 );
+    document.write(Count(arr1,num1));
+
+        </script>
+</body>
+</html>
