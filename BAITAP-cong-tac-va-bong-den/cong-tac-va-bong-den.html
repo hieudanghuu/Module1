@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style> 
+/* #lampImg {
+    image-orientation: ;
+} */
+</style>
+<body>
+ 
+    <input type="button" onclick="SwitchOn()" value="on">
+    <input type="button" onclick="SwitchOff()" value="off">
+    <div id = "lampImg">
+        <img src="off.png">
+    </div>
+    <script>
+        
+        class switchButton {
+            constructor(status, lamp) {
+                this.status = status;
+                this.lamp = lamp;
+            }
+            SwitchStatusOn () {
+                return this.status = true;
+            }
+            SwitchStatusOff() {
+                return this.status = false;
+            }         
+        }
+             
+        function SwitchOn() {
+            document.getElementById("lampImg").innerHTML='<img src="on.png">'
+        }
+        function SwitchOff(){
+            document.getElementById("lampImg").innerHTML='<img src="off.png">'
+
+        }
+    </script>
+</body>
+
+</html>
